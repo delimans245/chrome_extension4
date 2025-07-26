@@ -1,0 +1,27 @@
+#inputField {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 4px;
+}
+
+#save-el {
+    color: white;
+    background-color: #1E90FF;
+    border: none;
+    padding: 10px 20px;
+}
+
+#tab-el {
+    color: white;
+    background-color: #32CD32;
+    border: none;
+    padding: 10px 20px;
+}
+
+#delete-el {
+    color: white;
+    background-color: #FF6347;
+    border: none;
+    padding: 10px 20px;
+}
