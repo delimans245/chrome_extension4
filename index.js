@@ -6,3 +6,23 @@ let listEl = document.getElementById('list-el')
 let links = []
 
 
+saveEl.addEventListener('click', function() {
+    let inputValue = inputEl.value
+    if (inputValue) {
+        links.push(inputValue)
+        inputEl.value = ''
+        renderLinks()
+    }
+})
+
+function renderLinks() {
+    listEl.innerHTML = ''
+    for (let i = 0; i < links.length; i++) {
+        listEl.innerHTML += `
+            <li>
+                <a href="${links[i]}" target="_blank">
+                    ${links[i]}
+                </a>
+            </li>`
+    }
+}

@@ -1,8 +1,9 @@
-#inputField {
+#input-el {
     width: 100%;
     box-sizing: border-box;
     padding: 10px;
     margin-bottom: 4px;
+    min-width: 300px;
 }
 
 #save-el {
