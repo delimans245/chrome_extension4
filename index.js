@@ -4,6 +4,18 @@ let deleteEl = document.getElementById('delete-el')
 let tabEl = document.getElementById('tab-el')
 let listEl = document.getElementById('list-el')
 let links = []
+let localStorageEl = JSON.parse(localStorage.getItem('links'))
+
+if(localStorageEl) {
+    links = localStorageEl
+    renderLinks()
+}
+
+deleteEl.addEventListener('dblclick', function() {
+    localStorage.clear()
+    links = []
+    renderLinks()
+})
 
 
 saveEl.addEventListener('click', function() {
@@ -12,6 +24,7 @@ saveEl.addEventListener('click', function() {
         links.push(inputValue)
         inputEl.value = ''
         renderLinks()
+        localStorage.setItem('links', JSON.stringify(links))
     }
 })
 
