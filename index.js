@@ -17,7 +17,7 @@ deleteEl.addEventListener('dblclick', function() {
     renderLinks()
 })
 
-saveEl.addEventListener('click', function() {
+tabEl.addEventListener('click', function() {
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         let activeTab = tabs[0];
         let activeTabUrl = activeTab.url;
